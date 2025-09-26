@@ -25,8 +25,15 @@ class Rectangle(Shape):
         self.length = length
         self.width = width 
 
+    def __eq__(self, other):
+        if not isinstance(other, Rectangle):
+            return False 
+        
+        return self.width == other.width and self.length and self.length == other.length 
+
     def area(self):
         return self.length * self.width 
     
     def perimeter(self):
         return (self.length * 2) + (self.width * 2)
+        self.length
